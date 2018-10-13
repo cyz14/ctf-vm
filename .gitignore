@@ -1,3 +1,4 @@
 docker/host-share/decompile-api
 shared
 .vagrant
+*.log

@@ -70,11 +70,12 @@ install_peda() {
 }
 
 install_pin() {
-    name=pin-2.14-71313-gcc.4.4.7-linux
+    name=pin-3.7-97619-g0d0c92f4f-gcc-linux
     wget -q http://software.intel.com/sites/landingpage/pintool/downloads/$name.tar.gz
     tar -xf $name.tar.gz
     rm $name.tar.gz
     mv $name pin
+    sudo apt-get -y install gcc-multilib g++-multilib # needed to compile ia32 version examples
 }
 
 install_angr() {
