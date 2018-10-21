@@ -99,6 +99,12 @@ install_afl() {
     )
 }
 
+install_radare2() {
+    git_clone https://github.com/radare/radare2
+    cd radare2
+    sys/install.sh
+}
+
 install_ropgadget() {
     git_clone https://github.com/JonathanSalwan/ROPgadget ROPgadget
     cd ROPgadget
@@ -173,6 +179,8 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
     install_ pwntools
     install_ pin
     install_ afl
+
+    install_ radare2
 
     # Multiple ROP gadget finders
     install_ ropgadget

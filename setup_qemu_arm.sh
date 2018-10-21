@@ -24,7 +24,7 @@ echo
 echo "[+] Building QEMU"
 cd $basename
 ./configure --target-list=arm-linux-user
-make -j
+make -j4
 sudo make install
 echo
 
